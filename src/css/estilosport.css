@@ -2,6 +2,54 @@ html {
 	color: #fff;
 	scroll-behavior: smooth;
 }
+.home .slideshow {
+	display: flex;
+	overflow: hidden;
+	width: 200px; 
+	height: 300px;
+	margin-bottom: 20px;
+	
+  }
+  
+ .home .slide {
+	flex: 0 0 100%;
+	/* transition: transform 1s ease; /* Efeito de transição suave */
+	animation: slideAnimation 10s infinite;
+  }
+
+  img {
+	width: 100%;
+	height: auto;
+  }
+
+  
+  /* Animação para deslocar os slides para o lado */
+  @keyframes slideAnimation {
+	0% {
+		transform: translateX(0);
+	}
+	33.33% {
+		transform: translateX(-100%);
+	}
+	66.66% {
+		transform: translateX(-200%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+  }
+  
+  .home .slide:nth-child(1) {
+	animation: slideAnimation 9s infinite ; 
+  }
+  
+  .home .slide:nth-child(2) {
+	animation: slideAnimation 9s infinite ; /* Inicia após 1 segundo */
+  }
+  
+  .home .slide:nth-child(3) {
+	animation: slideAnimation 9s infinite ; /* Inicia após 2 segundos */
+  }
 
 body {
 	font-family: "Poppins", sans-serif;
@@ -15,7 +63,8 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 30px 15px;
+	padding: 30px 1px;
+	margin-left: 140px;
 }
 
 .cabecalho .logo {
@@ -48,6 +97,19 @@ body {
 	border-radius: 50px;
 }
 
+.cabecalho .container-foto .foto {
+	max-width: 600px;
+	border-radius: 50%;
+}
+
+
+.cabecalho .foto.sombra-interna {
+	background: linear-gradient(to right, #523771, #7B52A5, #ffe2ff);
+	background-size: 180% 180%;
+	animation: gradient-animation 5s ease infinite;
+	
+}
+
 .home {
 	display: flex;
 	min-height: calc(100vh - 125px);
@@ -55,6 +117,51 @@ body {
 	gap: 50px;
 	justify-content: space-between;
 }
+.home .slideshow {
+	display: flex;
+	overflow: hidden;
+	width: 350px; 
+	height: 400px;
+	margin-bottom: 20px;
+	
+  }
+  
+ .home .slide {
+	flex: 0 0 100%;
+	/* transition: transform 1s ease; /* Efeito de transição suave */
+	animation: slideAnimation 10s infinite;
+  }
+
+ 
+
+  
+  /* Animação para deslocar os slides para o lado */
+  @keyframes slideAnimation {
+	0% {
+		transform: translateX(0);
+	}
+	33.33% {
+		transform: translateX(-100%);
+	}
+	66.66% {
+		transform: translateX(-200%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+  }
+  
+  .home .slide:nth-child(1) {
+	animation: slideAnimation 9s infinite ; 
+  }
+  
+  .home .slide:nth-child(2) {
+	animation: slideAnimation 9s infinite ; /* Inicia após 1 segundo */
+  }
+  
+  .home .slide:nth-child(3) {
+	animation: slideAnimation 9s infinite ; /* Inicia após 2 segundos */
+  }
 
 .home .informacoes {
 	display: flex;
