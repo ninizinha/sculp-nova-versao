@@ -100,6 +100,7 @@ body {
 .cabecalho .container-foto .foto {
 	max-width: 600px;
 	border-radius: 50%;
+	margin-right: 50px;
 }
 
 
