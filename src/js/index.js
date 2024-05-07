@@ -21,3 +21,18 @@ function mostrarMaisProjetos() {
         projetoInativo.classList.add('ativo');
     });
 }
+
+let botaoAceitaMensagem = document.getElementById("botao-aceita-mensagem");
+botaoAceitaMensagem.addEventListener("click", aceitaMensagem);
+
+if(localStorage.getItem("aceitouCookie" == "1")){
+    aceitaMensagem();
+
+}
+
+function aceitaMensagem(){
+    let divMensagemUsuario = document.getElementById("container-mensagem-usuario");
+    divMensagemUsuario.classList.add("oculto");
+
+    localStorage.setItem("aceitouCookie", "1")
+}
