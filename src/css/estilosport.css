@@ -89,6 +89,7 @@ body {
 	text-transform: capitalize;
 	padding: 10px 20px;
 	transition: 0.2s;
+	
 }
 
 .cabecalho .menu li a:hover {
@@ -117,6 +118,7 @@ body {
 	align-items: center;
 	gap: 50px;
 	justify-content: space-between;
+	margin-top: 150px;
 }
 .home .slideshow {
 	display: flex;
@@ -174,6 +176,12 @@ body {
 }
 
 .home .informacoes h1 {
+	font-family: "Raleway", sans-serif;
+	font-size: 45px;
+	margin-bottom: 20px;
+}
+
+.home .informacoes h2 {
 	font-family: "Raleway", sans-serif;
 	font-size: 45px;
 	margin-bottom: 20px;
@@ -338,3 +346,18 @@ body {
 .oculto{
     display: none;
 }
+
+#botao-aceita-mensagem {
+    background-color: #9443d8; 
+    color: #fff; 
+    border: 1px solid #fff;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+  }
+
+#botao-aceita-mensagem:hover {
+    background-color: #6b31a8; 
+  }
