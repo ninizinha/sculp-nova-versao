@@ -140,6 +140,7 @@ body {
 	display: inline-block;
 	transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
 	margin-right: auto;
+	margin-top: 8px;
 	
 	
   }
@@ -162,7 +163,7 @@ body {
 	outline: none;
 	color: white;
 	font-size: 15px;
-	padding: 24px 46px 24px 26px;
+	padding: 26px 46px 24px 26px;
   }
 
 .home {
