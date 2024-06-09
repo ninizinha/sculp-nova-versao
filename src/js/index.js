@@ -37,23 +37,4 @@ function aceitaMensagem(){
     localStorage.setItem("aceitouCookie", "1")
 }
 
-function salvaResultadoHistorico(conversao) {
 
-    let historico = recuperarHistoricodeConversoes();
-
-    historico.push(conversao);
-
-    let conversaoEmJson = JSON.stringify(historico);
-    localStorage.setItem("historico", historico);
-}
-
-function recuperarHistoricodeConversoes(){
-    let historico = localStorage.getItem("historico");
-
-    if(!historico){
-        
-        return[];
-    }
-    let historicoConvertido = JSON.parse(historico);
-    return historicoConvertido;
-}

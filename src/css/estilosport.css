@@ -8,7 +8,6 @@ html {
 	width: 200px; 
 	height: 300px;
 	margin-bottom: 20px;
-	border-radius: 20px;
 	
   }
   
@@ -45,11 +44,11 @@ html {
   }
   
   .home .slide:nth-child(2) {
-	animation: slideAnimation 9s infinite ; /* Inicia após 9 segundo */
+	animation: slideAnimation 9s infinite ; /* Inicia após 1 segundo */
   }
   
   .home .slide:nth-child(3) {
-	animation: slideAnimation 9s infinite ; /* Inicia após 9 segundos */
+	animation: slideAnimation 9s infinite ; /* Inicia após 2 segundos */
   }
 
 body {
@@ -78,7 +77,6 @@ body {
 	line-height: 55px;
 	font-family: "Raleway", sans-serif;
 	transition: 0.2s;
-	
 }
 
 .cabecalho a:hover .logo {
@@ -96,7 +94,7 @@ body {
 
 .cabecalho .menu li a:hover {
 	background-color: #9443d8;
-	color: #fff ;
+	color: #fff;
 	border-radius: 50px;
 }
 
@@ -113,58 +111,6 @@ body {
 	animation: gradient-animation 5s ease infinite;
 	
 }
-
-.searchBox {
-	display: flex;
-	max-width: 230px;
-	align-items: center;
-	justify-content: space-between;
-	gap: 8px;
-	background: #2f3640;
-	border-radius: 50px;
-	position: relative;
-	margin: auto;
-	margin-top: 60px;
-
-
-  }
-.searchButton {
-	color: white;
-	position: absolute;
-	right: 8px;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background: var(--gradient-2, linear-gradient(90deg, #523771  0%, #9443d8 100%));
-	border: 0;
-	display: inline-block;
-	transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-	margin-right: auto;
-	margin-top: 8px;
-	
-	
-  }
-  /*hover effect*/
-  button:hover {
-	color: #fff;
-	background-color: #1A1A1A;
-	box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
-	transform: translateY(-3px);
-  }
-  /*button pressing effect*/
-  button:active {
-	box-shadow: none;
-	transform: translateY(0);
-  }
-  
-  .searchInput {
-	border: none;
-	background: none;
-	outline: none;
-	color: white;
-	font-size: 15px;
-	padding: 26px 46px 24px 26px;
-  }
 
 .home {
 	display: flex;
@@ -285,6 +231,76 @@ body {
 	animation: gradient-animation 5s ease infinite;
 }
 
+.favoritados {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 12px 10px 12px;
+	box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+	background-color: #e8e8e8;
+	border-color: #ffe2e2;
+	border-style: solid;
+	border-width: 9px;
+	border-radius: 35px;
+	transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), 
+	border-color 400ms ease-in-out,
+	background-color 400ms ease-in-out;
+	word-spacing: -2px;
+  }
+  
+  @keyframes movingBorders {
+	0% {
+	  border-color: #fce4e4;
+	}
+  
+	50% {
+	  border-color: #ffd8d8;
+	}
+  
+	90% {
+	  border-color: #fce4e4;
+	}
+  }
+  
+  button:hover {
+	background-color: #eee;
+	transform: scale(105%);
+	animation: movingBorders 3s infinite;
+  }
+  
+  button svg {
+	fill: rgb(255, 110, 110);
+  }
+  
+  @keyframes beatingHeart {
+	0% {
+	  transform: scale(1);
+	}
+  
+	15% {
+	  transform: scale(1.15);
+	}
+  
+	30% {
+	  transform: scale(1);
+	}
+  
+	45% {
+	  transform: scale(1.15);
+	}
+  
+	60% {
+	  transform: scale(1);
+	}
+  }
+  
+  button:hover svg {
+	transform: scale(105%);
+	border-color: #ffd8d8;
+	animation: beatingHeart 1.2s infinite;
+  }
+  
+
 .projetos {
 	padding: 70px 0 70px;
 }
@@ -372,6 +388,7 @@ body {
 	display: none;
 }
 
+
 @keyframes gradient-animation {
 	0% {
 		background-position: 0% 50%;
@@ -385,6 +402,84 @@ body {
 		background-position: 0% 50%;
 	}
 }
+.favorite {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 12px 10px 12px;
+	box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+	background-color: #e8e8e8;
+	border-color: #ffe2e2;
+	border-style: solid;
+	border-width: 9px;
+	border-radius: 35px;
+	transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), 
+	border-color 400ms ease-in-out,
+	background-color 400ms ease-in-out;
+	word-spacing: -2px;
+  }
+  
+  @keyframes movingBorders {
+	0% {
+	  border-color: #fce4e4;
+	}
+  
+	50% {
+	  border-color: #ffd8d8;
+	}
+  
+	90% {
+	  border-color: #fce4e4;
+	}
+  }
+  
+  button:hover {
+	background-color: #eee;
+	transform: scale(105%);
+	animation: movingBorders 3s infinite;
+  }
+  
+  .filled,
+  .empty {
+	fill: rgb(255, 110, 110);
+	transition: opacity 100ms ease-in-out;
+  }
+  
+  .filled {
+	position: absolute;
+	opacity: 0;
+  }
+  
+  @keyframes beatingHeart {
+	0% {
+	  transform: scale(1);
+	}
+  
+	15% {
+	  transform: scale(1.15);
+	}
+  
+	30% {
+	  transform: scale(1);
+	}
+  
+	45% {
+	  transform: scale(1.15);
+	}
+  
+	60% {
+	  transform: scale(1);
+	}
+  }
+  
+  button:hover .empty {
+	opacity: 0;
+  }
+  
+  button:hover .filled {
+	opacity: 1;
+	animation: beatingHeart 1.2s infinite;
+  }
 
 .mensagem-usuario{
     position: fixed;
@@ -416,7 +511,4 @@ body {
     background-color: #6b31a8; 
   }
 
-
-  
-  
   
