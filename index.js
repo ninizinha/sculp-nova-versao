@@ -39,9 +39,38 @@ function aceitaMensagem(){
 
 // Exemplo de dados de tatuagens
 const tattooData = [
-    {name: "Dragon Tattoo", description: "A fierce dragon on the back."},
-    {name: "Flower Tattoo", description: "A delicate rose on the arm."},
-    {name: "Skull Tattoo", description: "A spooky skull with flames."}
+    {name: "Tatuagem Aranha", description: "Tatuagem falsa de aranha"},
+    {name: "Tatuagem Coração Y2k", description: "Tatuagem coração com asas Y2K"},
+    {name: "Tatuagem Leão", description: "Tatuagem Leão"},
+    {name: "Tatuagem Borboleta", description: "Tatuagem Borboleta Sonhadora"},
+    {name: "Tatuagem Cobra", description: "Tatuagem Cobra"},
+    {name: "Tatuagem Dragão", description: "Tatuagem Dragão"},
+    {name: "Tatuagem Carpas", description: "Tatuagem Peixe Carpas"},
+    {name: "Tatuagem Lotus", description: "Tatuagem Flor Lotus"},
+    {name: "Tatuagem Sol e Mulher", description: "Tatuagem Sol com Mulher"},
+    {name: "Tatuagem Japonesa", description: "Tatuagem Mulher Japonesa com Máscara"},
+    {name: "Tatuagem Sereia", description: "Tatuagem de Sereia"},
+    {name: "Tatuagem Máscaras", description: "Tatuagem com duas máscaras"},
+    {name: "Tatuagem Bússola", description: "Tatuagem Bússola com escrita japonesa"},
+    {name: "Tatuagem Gato", description: "Tatuagem rosto de gato com lua na testa"},
+    {name: "Tatuagem Satoru Gojo", description: "Tatuagem anime Jujutsu Kaisen Satoru Gojo"},
+    {name: "Tatuagem Anjo Caído", description: "Tatuagem Anjo Caído"},
+    {name: "Tatuagem Jack", description: "Tatuagem Jack do Estranho Mundo de Jack"},
+    {name: "Tatuagem Tinta", description: "Tatuagem imitando traço de tinta"},
+    {name: "Tatuagem Astronauta", description: "Tatuagem com Astronauta flutuante"},
+    {name: "Tatuagem Gato e Flor", description: "Tatuagem colorida com Gato e Flor"},
+    {name: "Tatuagem Onda do Mar", description: "Tatuagem em círculo de onda do mar"},
+    {name: "Tatuagem Planetas", description: "Tatuagem com Planetas do Sistema Solar"},
+    {name: "Tatuagem Borboletas", description: "Tatuagem com Borboletas minimalista"},
+    {name: "Tatuagem Lobo", description: "Tatuagem Lobo com garras e lua na testa"},
+    {name: "Tatuagem Flor com Folhas", description: "Tatuagem de Flor com suas folhas"},
+    {name: "Tatuagem Mulher Demônio", description: "Tatuagem Mulher Demônio com Máscara"},
+    {name: "Tatuagem Mulher Guerreira", description: "Tatuagem Mulher com capacete com penas"},
+    {name: "Tatuagem Oni", description: "Tatuagem Oni com cobras"},
+    {name: "Tatuagem Coelho", description: "Tatuagem Coelho com pote de mel"},
+    {name: "Tatuagem Blessed", description: "Tatuagem escrita Blessed"},
+    {name: "Tatuagem Rosas", description: "Tatuagem de flor estilo Rosas"},
+    {name: "Tatuagem Leão e Leoa", description: "Tatuagem de Leão com Leoa"}
   ];
   
   // Função para exibir os resultados
