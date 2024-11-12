@@ -37,52 +37,43 @@ function aceitaMensagem(){
     localStorage.setItem("aceitouCookie", "1")
 }
 
-// Exemplo de dados de tatuagens
-const tattooData = [
-    {name: "Dragon Tattoo", description: "A fierce dragon on the back."},
-    {name: "Flower Tattoo", description: "A delicate rose on the arm."},
-    {name: "Skull Tattoo", description: "A spooky skull with flames."}
-  ];
-  
-  // Função para exibir os resultados
-  function displayResults(results) {
-    const resultsContainer = document.getElementById('results');
-    resultsContainer.innerHTML = ''; // Limpa os resultados anteriores
-  
-    if (results.length === 0) {
-      resultsContainer.innerHTML = "<p>No results found</p>";
-    } else {
-      results.forEach(tattoo => {
-        const resultItem = document.createElement('div');
-        resultItem.classList.add('result-item');
-        resultItem.innerHTML = `
-          <h3>${tattoo.name}</h3>
-          <p>${tattoo.description}</p>
-        `;
-        resultsContainer.appendChild(resultItem);
-      });
-    }
-  }
-  
-  // Função para buscar tatuagens com base no input do usuário
-  function searchTattoos(query) {
-    const filteredResults = tattooData.filter(tattoo =>
-      tattoo.name.toLowerCase().includes(query.toLowerCase()) || 
-      tattoo.description.toLowerCase().includes(query.toLowerCase())
-    );
-    displayResults(filteredResults);
-  }
-  
-  // Adiciona o evento ao campo de input (para digitação)
-  document.getElementById('searchBar').addEventListener('input', function(event) {
-    const query = event.target.value;
-    searchTattoos(query);
+document.querySelector(".searchButton").addEventListener("click", function(event) {
+  event.preventDefault(); // Evita o comportamento padrão do botão
+
+  const searchTerm = document.querySelector(".searchInput").value.toLowerCase();
+  const items = document.querySelectorAll(".container-projetos .projeto");
+
+  let hasResults = false;
+
+  items.forEach(item => {
+      const title = item.querySelector("h3").textContent.toLowerCase();
+      const description = item.querySelector(".informacoes-projeto").textContent.toLowerCase();
+
+      // Verifica se o termo de busca está no título ou na descrição
+      if (title.includes(searchTerm) || description.includes(searchTerm)) {
+          item.style.display = "block"; // Mostra o item se corresponder ao termo
+          hasResults = true;
+      } else {
+          item.style.display = "none"; // Esconde o item se não corresponder ao termo
+      }
   });
-  
-  // Adiciona o evento ao botão de pesquisa (ao clicar)
-  document.getElementById('searchButton').addEventListener('click', function() {
-    const query = document.getElementById('searchBar').value;
-    searchTattoos(query);
-  });
-  
+
+  // Exibe uma mensagem caso nenhum resultado seja encontrado
+  const resultsContainer = document.getElementById("results");
+  resultsContainer.innerHTML = ''; // Limpa mensagens anteriores
+
+  if (!hasResults) {
+      resultsContainer.innerHTML = "<p>Nenhum resultado encontrado</p>";
+  }
+});
+
+// Atualização opcional para limpar a busca ao limpar o campo de busca
+document.querySelector(".searchInput").addEventListener("input", function() {
+  if (this.value === "") {
+      const items = document.querySelectorAll(".container-projetos .projeto");
+      items.forEach(item => item.style.display = "block");
+      document.getElementById("results").innerHTML = '';
+  }
+});
+
 
