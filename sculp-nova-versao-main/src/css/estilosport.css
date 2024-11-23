@@ -18,6 +18,13 @@ html {
 	animation: slideAnimation 10s infinite;
   }
 
+  .home, .projetos {
+	flex-wrap: wrap; /* Permitir quebra de linha */
+	align-items: flex-start; /* Alinha ao topo */
+	overflow: hidden; /* Evitar que o conteúdo escape */
+  }
+  
+
   img {
 	width: 100%;
 	height: auto;
@@ -86,18 +93,18 @@ body {
 }
 
 .searchBox {
-  display: flex;
-  max-width: 230px;
-  align-items: center;
-  justify-content: center;
-  right: 7px;
-  left: 450px;
-  gap: 8px;
-  background: #2f3640;
-  border-radius: 50px;
-  position:relative;
-}
-
+	display: flex;
+	max-width: 400px; /* Garantir um tamanho fixo */
+	align-items: center;
+	justify-content: space-between; /* Alinha internamente */
+	gap: 8px;
+	padding: 10px;
+	background: #2f3640;
+	border-radius: 50px;
+	position: relative; /* Removendo `absolute` */
+	margin: 20px auto; /* Centraliza horizontalmente */
+  }
+  
 .searchButton {
   color: white;
   position: absolute;
@@ -145,6 +152,19 @@ button:active {
   z-index: 1000; /* Garante que a barra fique acima de outros elementos */
 }
 
+.resultados-pesquisa {
+	width: 100%; /* Garantir que ocupe todo o espaço */
+	max-width: 1120px; /* Mesmo limite que o `body` */
+	margin: 20px auto;
+	padding: 10px;
+	background-color: #fff; /* Contraste para destaque */
+	color: #000;
+	border-radius: 10px;
+	overflow-y: auto; /* Permitir rolagem vertical */
+	max-height: 400px; /* Limitar altura */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
 /* Ajuste no botão de pesquisa */
 .searchButton {
   color: white;
@@ -572,4 +592,16 @@ button:active {
     background-color: #6b31a8; 
   }
 
+  @media (max-width: 768px) {
+	.resultados-pesquisa {
+	  max-height: 300px;
+	  font-size: 14px; /* Reduz o tamanho da fonte */
+	  padding: 5px;
+	}
+  
+	.searchBox {
+	  max-width: 300px;
+	}
+  }
+  
   
